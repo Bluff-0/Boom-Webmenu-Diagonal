@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Diagonal Navbar</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<nav class="menu-activea">
+		<h1>Navigate</h1>
+		<ul>
+			<li>Home</li>
+			<li>Menu</li>
+			<li>Gallery</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+	<main>
+		<section>
+			<br><br><br>
+			<h1>&larr; Bruh It's Diagonal</h1>
+			<br>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque fermentum dui faucibus in ornare quam viverra. Bibendum enim facilisis gravida neque convallis a cras semper. Integer enim neque volutpat ac tincidunt vitae. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Praesent elementum facilisis leo vel fringilla est ullamcorper. Sit amet purus gravida quis. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Varius sit amet mattis vulputate enim. Quis viverra nibh cras pulvinar. Vivamus arcu felis bibendum ut tristique. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
+			</p>
+			<p>
+				Adipiscing elit duis tristique sollicitudin nibh. Non quam lacus suspendisse faucibus interdum posuere lorem. Habitant morbi tristique senectus et netus et malesuada fames ac. Aenean sed adipiscing diam donec adipiscing tristique risus. Lacinia at quis risus sed vulputate odio ut.
+			</p>
+		</section>
+	</main>
+	<script type="text/javascript">
+		(function() {
+
+  var nav = $('nav'),
+    menu = $('nav h1'),
+    main = $('main'),
+  	open = false,
+  	hover = false;
+
+  menu.on('click', function() {
+		open = !open ? true : false;
+    nav.toggleClass('menu-active');
+    main.toggleClass('menu-active');
+    nav.removeClass('menu-hover');
+    main.removeClass('menu-hover');
+    console.log(open);
+  });
+  menu.hover( 
+    function() {
+      if (!open) {
+      	nav.addClass('menu-hover');
+      	main.addClass('menu-hover');
+      }
+    }, function() {
+      nav.removeClass('menu-hover');
+      main.removeClass('menu-hover');
+    }
+  );
+
+})();
+	</script>
+</body>
+</html>
